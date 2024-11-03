@@ -49,10 +49,14 @@ td {
 }
 
 button {
-  background-color: #20c50d;
+  background-color: #f5e551;
   color: white;
   border: none;
   padding: 6px 10px;
   border-radius: 4px;
   cursor: pointer;
+}
+
+button:hover {
+  background-color: #39da2e;
 }
