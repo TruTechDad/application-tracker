@@ -19,3 +19,31 @@ function renderApplications() {
     applicationBody.appendChild(row);
   });
 }
+
+// Function to add a new application
+function addApplication(e) {
+  e.preventDefault();
+  const newApplication = {
+    company: form.company.value,
+    position: form.position.value,
+    date: form.date.value,
+    status: form.status.value,
+  };
+  applications.push(newApplication);
+  localStorage.setItem("applications", JSON.stringify(applications));
+  renderApplications();
+  form.reset();
+}
+
+// Function to delete an application
+function deleteApplication(index) {
+  applications.splice(index, 1);
+  localStorage.setItem("applications", JSON.stringify(applications));
+  renderApplications();
+}
+
+// Event listeners
+form.addEventListener("submit", addApplication);
+
+// Initial render
+renderApplications();
