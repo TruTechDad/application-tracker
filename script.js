@@ -1,6 +1,6 @@
 // To enable Selection
-const form = document.addEventListener("application-form");
-const applicationBody = document.addEventListener("application-body");
+const form = document.getElementById("application-form");
+const applicationBody = document.getElementById("application-body");
 
 // Load applications form localStorage
 let applications = JSON.parse(localStorage.getItem("applications")) || [];
